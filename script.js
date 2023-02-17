@@ -6,14 +6,7 @@ function begin() { //Working
 function status() {
   var div = document.getElementById('status');
   let i = 0;
-  let interval = setInterval(() => {
-    div.innerHTML = (Math.round((i/neverWords.length)*100) + "%");
-    i++;
-    if (i == neverWords.length) {
-      clearInterval(interval);
-      bake();
-    }
-  }, (2/neverWords.length)*1000);
+  bake();
 } //Working
 
 function bake() { //https://stackoverflow.com/questions/32389568/search-for-a-string-from-a-textbox-in-a-textarea
