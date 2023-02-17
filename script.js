@@ -5,7 +5,6 @@ function begin() { //Working
 }
 function status() {
   var div = document.getElementById('status');
-  let i = 0;
   bake();
 } //Working
 
