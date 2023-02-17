@@ -13,6 +13,7 @@ function bake() { //https://stackoverflow.com/questions/32389568/search-for-a-st
   console.log("Called callSuggestion");
   paragraph = document.getElementById("text").textContent; // <--- Global Variable ????
   console.log(paragraph);
+  document.getElementById("improvements").replaceChildren([]);
   for (i = 0; i < neverWords.length; i++) {
     if (neverWords.length > 0 && paragraph.indexOf(neverWords[i]) > -1) {
       searchResults.push(neverWords[i]);
@@ -63,7 +64,9 @@ function suggestTab(word, suggest, location) {
   var title = word;
   var paragraph = suggest;
   var position = location;
-  document.getElementById("add_after_me").insertAdjacentHTML("afterend", `<div class=\"suggestion\"><h2>${title}</h2><p>${paragraph}</p><br><button style="display: inline;" onclick='this.parentNode.remove(this); acceptEdit("${title}", "${paragraph}", ${position}); recalculate("button");'>Accept</button><button style="display: inline;" onclick='this.parentNode.remove(this)'>Reject</button></div>`)
+  let thing = document.createElement('div');
+  thing.innerHTML = `<div class=\"suggestion\"><h2>${title}</h2><p>${paragraph}</p><br><button style="display: inline;" onclick='this.parentNode.remove(this); acceptEdit("${title}", "${paragraph}", ${position}); recalculate("button");'>Accept</button><button style="display: inline;" onclick='this.parentNode.remove(this)'>Reject</button></div>`
+  document.getElementById("improvements").appendChild(thing);
 } //Working (Sort of)
 
 function acceptEdit(word, suggest, location) {
