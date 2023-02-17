@@ -21,7 +21,7 @@ function modal(present) {
 
 function toggleTheme() { // https://www.geeksforgeeks.org/how-to-switch-between-multiple-css-stylesheets-using-javascript/
 	const theme = document.getElementById('theme');
-	if (theme.getAttribute('href') == 'light.css') {
+	if (theme.getAttribute('href') == 'assets/styles/light.css') {
 		theme.setAttribute('href', 'assets/styles/dark.css');
 	} else {
 		theme.setAttribute('href', 'assets/styles/light.css');
@@ -45,8 +45,8 @@ function defaultTheme() { // https://stackoverflow.com/questions/18031410/javasc
 	const theme = document.getElementById('theme');
 	const hour = new Date().getHours();
 	if (hour >= 18 || hour <= 7) {
-		theme.setAttribute('href', 'dark.css');
+		theme.setAttribute('href', 'assets/styles/dark.css');
 	} else {
-		theme.setAttribute('href', 'light.css');
+		theme.setAttribute('href', 'assets/styles/light.css');
 	}
 }
