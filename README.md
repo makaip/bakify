@@ -1,5 +1,7 @@
 # **Bakify**
 
+![Bakify Logo](assets/images/icon.png)
+
 ## What is Bakify?
 
 Originally designed for Ms. Baker's class, Bakify is an online web application that allows you to scan your writing for analytical never-words and offers synonymous terms as replacements. It (debatably) improves your writing by highlighting weak words that impede your message, and has automatic dark mode that turns on at night. If there are any programmers who have any suggestions, I would love to hear feedback! (built-in form on website).  Please note that Bakify is still in beta, meaning not all features are fully available, and Bakify will continue to develop and improve.
