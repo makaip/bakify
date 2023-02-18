@@ -10,18 +10,20 @@ html, body {
   text-align: center;
 }
 h1 {
+  font-weight: normal;
   color: var(--main);
   font-size: 64px;
   margin: 10px 5px;
   font-family: 'Roboto Mono', monospace;
 }
 h2 {
+  font-weight: normal;
   color: var(--main);
   font-size: 28px;
   margin: 10px 5px;
   font-family: 'Roboto Mono', monospace;
 }
-p {
+p, li {
   color: var(--main);
   margin: 10px 5px;
   font-family: 'Montserrat', sans-serif;
@@ -97,6 +99,7 @@ input:focus {
   width: auto;
   margin: auto;
   justify-content: center;
+  max-width: 750px;
 }
 textarea {
   /* transition-duration: 0.2s; */

@@ -8,7 +8,14 @@
     <p>Bakify allows users to scan for over 51 different analytical never-words with weak verb support coming soon. It reduces the time spent searching for words and can provide synonymous terms automatically within the website. More analytical never-words and weak verbs will be added as Bakify develops.</p>
     <br>
     <h1>Change Log</h1>
-    <h2> [ Beta Version 1.3 ] </h2>
+    <h2> Beta Version 1.4</h2>
+    <ul>
+      <li>File management and loading times decreased.</li>
+      <li>Ads removed (for now) and gaps in webpage have been filled.</li>
+      <li>New tutorial page added (idk why anyone needs it tho).</li>
+      <li>Overall optimization and updates to comply with AdSense policies.</li>
+    </ul>
+    <h2> Beta Version 1.3 </h2>
     <ul>
       <li>Bakify now automatically redraws highlighted suggestions when acception an edit.</li>
       <li>Accepting an edit automatically replaces the text with a synonymous term or applies the edit.</li>

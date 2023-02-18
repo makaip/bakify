@@ -23,7 +23,7 @@ h2 {
   margin: 10px 5px;
   font-family: 'Roboto Mono', monospace;
 }
-p {
+p, li {
   color: var(--main);
   margin: 10px 5px;
   font-family: 'Montserrat', sans-serif;
@@ -99,6 +99,7 @@ input:focus {
   width: auto;
   margin: auto;
   justify-content: center;
+  max-width: 750px;
 }
 textarea {
   /* transition-duration: 0.2s; */
