@@ -19,7 +19,8 @@ function modal(present) {
 	}
 }
 
-function toggleTheme() { // https://www.geeksforgeeks.org/how-to-switch-between-multiple-css-stylesheets-using-javascript/
+// https://www.geeksforgeeks.org/how-to-switch-between-multiple-css-stylesheets-using-javascript/
+function toggleTheme() {
 	const theme = document.getElementById('theme');
 	if (theme.getAttribute('href') == 'assets/styles/light.css') {
 		theme.setAttribute('href', 'assets/styles/dark.css');
@@ -28,7 +29,8 @@ function toggleTheme() { // https://www.geeksforgeeks.org/how-to-switch-between-
 	}
 }
 
-function defaultTheme() { // https://stackoverflow.com/questions/18031410/javascript-if-time-is-between-7pm-and-7am-do-this
+// https://stackoverflow.com/questions/18031410/javascript-if-time-is-between-7pm-and-7am-do-this
+function defaultTheme() { 
 	console.log('Welcome to the cool kids club i guess');
 	console.log('Enjoy some cool ascii art.');
 	console.log('');
