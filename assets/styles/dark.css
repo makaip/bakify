@@ -1,9 +1,10 @@
 :root {
   --main: #0dde30;
   --sec: #0e1525;
+  --highlight: #04390d;
 }
 ::selection {
-  background: #04390d;
+  background: var(--highlight);
 }
 html, body {
   background-color: var(--sec);
@@ -38,6 +39,9 @@ button {
   color: var(--main);
   font-family: 'Roboto Mono', monospace;
   padding: 5px 10px;
+  justify-content: center;
+  vertical-align: middle;
+  align-items: center;
 }
 button:hover {
   border: 2px solid var(--main);
@@ -131,7 +135,7 @@ textarea:focus {
 }
 .word {
   font-weight: bold;
-  background-color: #04390d;
+  background-color: var(--highlight);
   font-family: 'Roboto Mono', monospace;
   border-radius: 4px;
 }
