@@ -1,17 +1,27 @@
 function begin() { // Working
-	modal(true);
-	status();
+	bake();
+	//modal(true);
+	//stat();
 	// setTimeout(callSuggestions, 0);
 }
-function status() {
+/*
+function stat() {
 	const div = document.getElementById('status');
-	bake();
+	let interval = setInterval(() => {
+		div.innerHTML = (Math.round((i/neverWords.length)*100) + "%");
+		i++;
+		if (i == neverWords.length) {
+		  clearInterval(interval);
+		  bake();
+		}
+	  }, 10);
 } // Working
+*/
 
 // https://stackoverflow.com/questions/32389568/search-for-a-string-from-a-textbox-in-a-textarea
 function bake() {
 	console.log('Called callSuggestion');
-	paragraph = document.getElementById('text').textContent; // <--- Global Variable ????
+	var paragraph = document.getElementById('text').textContent; // <--- Global Variable ????
 	console.log(paragraph);
 	document.getElementById('improvements').replaceChildren([]);
 	for (i = 0; i < neverWords.length; i++) {
@@ -25,7 +35,7 @@ function bake() {
 		subjectGlobalized = new RegExp(searchResults[i], 'gi');
 		console.log(subjectGlobalized + ' ' + searchResults[i] + ' : ' + paragraph);
 		const highlighted = paragraph.replace(subjectGlobalized, '</span><span class=\'word\'>' + searchResults[i] + '</span><span class=\'other\'>');
-		let paragraph = highlighted;
+		var paragraph = highlighted;
 	}
 	document.getElementById('text').innerHTML = paragraph;
 	console.log('Final array: ' + searchResults);
@@ -46,7 +56,7 @@ function recalculate(test) {
 	for (i = 0; i < recalculatedResults.length; i++) {
 		subjectGlobalized = new RegExp(recalculatedResults[i], 'gi');
 		const highlighted = paragraph.replace(subjectGlobalized, '</span><span class=\'word\'>' + recalculatedResults[i] + '</span><span class=\'other\'>');
-		let paragraph = highlighted;
+		var paragraph = highlighted;
 	}
 	console.log(paragraph);
 	document.getElementById('text').innerHTML = paragraph;
@@ -76,9 +86,9 @@ function acceptEdit(word, suggest, location) {
 	wordGlobalized = new RegExp(word, 'gi');
 	console.log(new RegExp(word, 'gi'));
 	if (suggest == ' REMOVE ') {
-		let fixed = paragraph.replace(wordGlobalized, ' ');
+		var fixed = paragraph.replace(wordGlobalized, ' ');
 	} else {
-		let fixed = paragraph.replace(wordGlobalized, suggest);
+		var fixed = paragraph.replace(wordGlobalized, suggest);
 	}
 	document.getElementById('text').innerHTML = fixed;
 
