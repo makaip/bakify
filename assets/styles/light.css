@@ -1,9 +1,10 @@
 :root {
   --main: #009000;
   --sec: white;
+  --highlight: #cce0cc;
 }
 ::selection {
-  background: #cce0cc;
+  background: var(--highlight);
 }
 html, body {
   background-color: var(--sec);
@@ -36,7 +37,7 @@ a {
   font-family: 'Roboto Mono', monospace;
 }
 a:hover {
-  background: #cce0cc;
+  background: var(--highlight);
   border-radius: 4px;
 }
 button {
@@ -144,7 +145,7 @@ textarea:focus {
 }
 .word {
   font-weight: bold;
-  background-color: #cce0cc;
+  background-color: var(--highlight);
   font-family: 'Roboto Mono', monospace;
   border-radius: 4px;
 }
