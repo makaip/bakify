@@ -25,7 +25,7 @@ function bake() {
 	console.log(paragraph);
 	document.getElementById('improvements').replaceChildren([]);
 	for (i = 0; i < neverWords.length; i++) {
-		if (neverWords.length > 0 && paragraph.indexOf(neverWords[i]) > -1) {
+		if (neverWords.length > 0 && paragraph.indexOf(neverWords[i]) > -1) { // <-- idk what this does lol
 			searchResults.push(neverWords[i]);
 			searchReplacements.push(neverWordReplacemnts[i]);
 			suggestTab(neverWords[i], neverWordReplacemnts[i], i);

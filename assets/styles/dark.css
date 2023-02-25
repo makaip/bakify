@@ -30,6 +30,16 @@ p, li {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.5;
 }
+a {
+  color: var(--main);
+  margin: 10px 5px;
+  font-weight: bold;
+  font-family: 'Roboto Mono', monospace;
+}
+a:hover {
+  background: var(--highlight);
+  border-radius: 4px;
+}
 button {
   margin: 10px 5px;
   transition-duration: 0.2s;
