@@ -87,7 +87,7 @@ const neverWordReplacemnts =
   	' obtain ', 			//30
   	' obtained ', 			//31
   	' obtains ', 			//32
-  	' antagonistic', 		//33
+  	' antagonistic ', 		//33
   	' excellent ', 			//34
   	' simmilar to ', 		//35
   	' one ', 				//36
