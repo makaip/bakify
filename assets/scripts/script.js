@@ -1,10 +1,10 @@
 function begin() { // Working
 	bake();
-	//modal(true);
-	//stat();
-	// setTimeout(callSuggestions, 0);
+	modal(true);
+	stat();
+	setTimeout(callSuggestions, 0);
 }
-/*
+
 function stat() {
 	const div = document.getElementById('status');
 	let interval = setInterval(() => {
@@ -16,7 +16,7 @@ function stat() {
 		}
 	  }, 10);
 } // Working
-*/
+
 
 // https://stackoverflow.com/questions/32389568/search-for-a-string-from-a-textbox-in-a-textarea
 function bake() {
