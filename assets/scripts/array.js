@@ -51,7 +51,17 @@ const neverWords =
   	' brain ',  			//49
   	' diction ',  			//50
   	' syntax ',  			//51
-  	' imagery '];  			//52
+  	' imagery ',  			//52
+	" don't ",				//53
+	" can't ",				//54
+	" won't ",				//55
+	" isn't ",				//56
+	" he's ",				//57
+	" she's ",				//58
+	" they're ",			//59
+	" just ",				//60
+	" reader "				//61
+];
 
 const neverWordReplacemnts =
   ['1234567890qwertyuiopasdfghjklzxcvbnm',
@@ -106,6 +116,19 @@ const neverWordReplacemnts =
   	' REMOVE ', 			//49
   	' REMOVE ', 			//50
   	' REMOVE ', 			//51
-  	' REMOVE ']; 			//52
+  	' REMOVE ',	 			//52
+	' do not ',				//53
+	' cannot ',				//54
+	' will not ',			//55
+	' is not ',				//56
+	' he is ',				//57
+	' she is ',				//58
+	' they are ',			//59
+	' only ',				//60
+	' REMOVE '				//61
+];
+
 const searchResults = [];
 const searchReplacements = [];
+
+
