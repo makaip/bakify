@@ -14,7 +14,7 @@ function stat() {
 		  clearInterval(interval);
 		  bake();
 		}
-	  }, 10);
+	  }, 20);
 } // Working
 
 

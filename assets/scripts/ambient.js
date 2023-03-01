@@ -52,3 +52,9 @@ function defaultTheme() {
 		theme.setAttribute('href', 'assets/styles/light.css');
 	}
 }
+
+function synonym() {
+	fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response => response.json())
+	return json;
+}
