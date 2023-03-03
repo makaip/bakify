@@ -33,12 +33,12 @@ function bake() {
 			console.log('True Bake Iteration' + neverWords[i][0]);
 			searchResults.push(neverWords[i][0]);
 			let l = neverWords[i][1].length;
-			let r = random(0,l);
+			let r = random(0,l-1);
 			searchReplacements.push(neverWords[i][1][r]);
 			suggestTab(neverWords[i][0], neverWords[i][1][r], i);
 		}
 	}
-	for (i = 0; i < searchResults.length; i++) {
+	for (i = 0; i < searchResults.length; i++) { //Highlight
 		subjectGlobalized = new RegExp(searchResults[i], 'gi');
 		console.log(subjectGlobalized + ' ' + searchResults[i]);
 		const highlighted = paragraph.replace(subjectGlobalized, '</span><span class=\'word\'>' + searchResults[i] + '</span><span class=\'other\'>');
@@ -47,6 +47,11 @@ function bake() {
 	document.getElementById('text').innerHTML = paragraph;
 	console.log('Final array: ' + searchResults);
 	console.log('Final solutions: ' + searchReplacements);
+	if (searchResults.length == 0) { //Handle No Neverwords
+		const thing = document.createElement('div');
+		thing.innerHTML = `<div class=\"suggestion\"><h2>All Good!</h2><p>We didn't find any errors :) </p><br></div>`;
+		document.getElementById('improvements').appendChild(thing);
+	}
 } // Working
 
 function recalculate() {
@@ -66,6 +71,7 @@ function recalculate() {
 	document.getElementById('text').innerHTML = paragraph;
 }
 
+/*
 function highlight(subject) {
 	subjectGlobalized = new RegExp(subject, 'gi');
 	console.log(subjectGlobalized + ' ' + subject);
@@ -73,6 +79,7 @@ function highlight(subject) {
 	let paragraph = highlighted;
 	document.getElementById('text').innerHTML = paragraph;
 }
+*/
 
 function suggestTab(word, suggest, location) {
 	const title = word;
