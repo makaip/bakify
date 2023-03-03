@@ -130,15 +130,15 @@ textarea:focus {
 }
 
 #text {
-    border-radius: 8px;
-    border: 2px solid var(--main);
-    background-color: var(--sec);
-    color: var(--main);
-    font-family: 'Roboto Mono', monospace;
-    padding: 15px 20px;
-    outline: none;
-    width: 700px;
-    text-align: left;
+  border-radius: 8px;
+  border: 2px solid var(--main);
+  background-color: var(--sec);
+  color: var(--main);
+  font-family: 'Roboto Mono', monospace;
+  padding: 15px 20px;
+  outline: none;
+  width: 700px;
+  text-align: left;
 }
 #text:focus {
   border: 2px solid var(--main);

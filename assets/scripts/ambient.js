@@ -19,6 +19,18 @@ function modal(present) {
 	}
 }
 
+function displayBox(present) {
+	console.log('Modal Called');
+	const suggestionsBox = document.getElementById('improvements');
+	if (present == true) {
+		suggestionsBox.style.display = 'block';
+		console.log('Suggestions: Block');
+	} else {
+		suggestionsBox.style.display = 'none';
+		console.log('Suggestions: None');
+	}
+}
+
 // https://www.geeksforgeeks.org/how-to-switch-between-multiple-css-stylesheets-using-javascript/
 function toggleTheme() {
 	const theme = document.getElementById('theme');
@@ -46,6 +58,10 @@ function defaultTheme() {
 
 	const theme = document.getElementById('theme');
 	const hour = new Date().getHours();
+
+	const suggestionsBox = document.getElementById('improvements');
+	suggestionsBox.style.display = 'none';
+	
 	if (hour >= 18 || hour <= 7) {
 		theme.setAttribute('href', 'assets/styles/dark.css');
 	} else {
@@ -53,8 +69,6 @@ function defaultTheme() {
 	}
 }
 
-function synonym() {
-	fetch('https://jsonplaceholder.typicode.com/todos/1')
-      .then(response => response.json())
-	return json;
+function random(min, max) { // min and max included 
+	return Math.floor(Math.random() * (max - min + 1) + min)
 }

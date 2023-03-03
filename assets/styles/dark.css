@@ -137,7 +137,7 @@ textarea:focus {
     font-family: 'Roboto Mono', monospace;
     padding: 15px 20px;
     outline: none;
-    width: 700px;
+    max-width: 700px;
     text-align: left;
 }
 #text:focus {
