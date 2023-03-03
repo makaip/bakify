@@ -6,20 +6,20 @@
     <title>Bakify</title>
     <link rel="assets/images/icon.png" href="assets/images/icon.png"/>
     <link id="theme" rel="stylesheet" type="text/css" href="assets/styles/dark.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0" />
     <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2576138748134475"
      crossorigin="anonymous"></script> -->
   </head>
-  <body onload="defaultTheme()">
+  <body onload="
+  defaultTheme();
+  const suggestionsBox = document.getElementById('improvements');
+	suggestionsBox.style.display = 'none';">
     <br>
     <br>
     <br>
     <h1>Bakify</h1>
     <p>Beta Version 1.5</p>
-    <button onclick="location.href='tutorial.html';"> <span class="material-symbols-outlined">description</span> Tutorial</button>
+    <button onclick="location.href='tutorial.html';"> <span class="material-symbols-outlined">description</span> About</button>
     <!-- <button onclick="location.href='about.html';">What is Bakify?</button> -->
     <br>
     <br>

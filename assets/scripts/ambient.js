@@ -58,9 +58,6 @@ function defaultTheme() {
 
 	const theme = document.getElementById('theme');
 	const hour = new Date().getHours();
-
-	const suggestionsBox = document.getElementById('improvements');
-	suggestionsBox.style.display = 'none';
 	
 	if (hour >= 18 || hour <= 7) {
 		theme.setAttribute('href', 'assets/styles/dark.css');
@@ -72,3 +69,7 @@ function defaultTheme() {
 function random(min, max) { // min and max included 
 	return Math.floor(Math.random() * (max - min + 1) + min)
 }
+
+$('[contenteditable]').on('blur keyup paste', function () {
+	$(this).html($(this).text());
+});

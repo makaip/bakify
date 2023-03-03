@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Mono&display=swap');
 :root {
   --main: #009000;
   --sec: white;
@@ -142,6 +143,7 @@ textarea {
   font-family: 'Roboto Mono', monospace;
   padding: 15px 20px;
   outline: none;
+  
 }
 
 textarea:focus {
