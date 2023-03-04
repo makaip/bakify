@@ -13,6 +13,15 @@ Bakify allows users to scan for over 51 different analytical never-words with we
 
 ## Changelog
 
+### Beta Version 1.5
+
+ - New dynamic suggestions system allows users to "recalculate" their suggestions.
+ - Array reformatted for enhanced optimization.
+ - Icons added to buttons for increased usability.
+ - Dynamic suggestions system vocabulary is not fully capable of contextual blending.
+ - Tutorial page updated for more relevant experience.
+ - Dark mode bug fixed in the tutorial page.
+
 ### Beta Version v1.4
 
  - File management and loading times decreased.
@@ -34,7 +43,6 @@ Bakify allows users to scan for over 51 different analytical never-words with we
  - Suggestion system allows users to find synonymous terms, but does not replace them automatically.
  - Automatically switches between light mode and dark mode depending on time of day.
  - Loading system displays progress in a popup window.
-
 
 ### Beta Version v1.1
 
