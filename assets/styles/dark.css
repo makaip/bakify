@@ -193,3 +193,9 @@ textarea:focus {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+.material-symbols-outlined {
+  display: inline-flex;
+  vertical-align: middle;
+}
+

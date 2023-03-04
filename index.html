@@ -19,7 +19,6 @@
     <br>
     <h1>Bakify</h1>
     <p>Beta Version 1.5</p>
-    <button onclick="location.href='tutorial.html';"> <span class="material-symbols-outlined">description</span> About</button>
     <!-- <button onclick="location.href='about.html';">What is Bakify?</button> -->
     <br>
     <br>
@@ -39,9 +38,9 @@
       <div class="griditem">
         <!-- <textarea id="text" name="text" rows="30"
           cols="80">Elegantly intuitive, Bakify automatically formats anything you write and shows you analytical never words, really making your writing more positive. For example, the about page says Bakify is a “simple website” that inserts “MLA formatting” and scans for “analytical never-words” (Bakify 1). The narrator uses very good diction and imagery to show that Bakify helps you write better as a whole, and can fix anything you say. The monochromatic simplicity of Bakify’s design reflects the conciseness it employs on the text it is fixing. This proves that Bakify is an effective, elegant, and intuitive extension that instantaneously transforms your writing, elevating it to a higher level.</textarea> -->
-        <div id="text" contenteditable="true"><span class='other'>Paste text here using <span class="section">Cmd</span> + <span class="section">Shift</span> + <span class="section">V</span>. </span></div>
+        <div id="text" contenteditable="true"><span class='other'>Paste text here using <span class="section">Cmd</span> + <span class="section">Shift</span> + <span class="section">V</span>. </span><br><br><br><br></div>
         <br>
-        <button style="display: inline; " onclick="toggleTheme()"> <span class="material-symbols-outlined">dark_mode</span> Theme </button>
+        <button style="display: inline;" onclick="toggleTheme()"> <span class="material-symbols-outlined">dark_mode</span> Theme </button>
         <button style="display: inline;" onclick='begin()'> <span class="material-symbols-outlined">oven_gen</span> Bake </button>
         <!-- <button style="display: inline;" onclick='modal(true);'> ModalDebug </button> -->
         <!-- <button style="display: inline;" onclick='suggestTab("Hello")'> debugSuggestion </button> -->
@@ -59,14 +58,12 @@
       <br>
       <h2>Please Note</h2>
       <ul style="text-align: left;">
-        <li>Bakify is <strong>still in Beta</strong>, meaning that there are a few errors.</li>
         <li>This program <strong> will not </strong> magically fix your essay as it only finds analytical neverwords and offers synonymous terms.</li>
         <li>Please put your text through a grammar checker and proofread after use.</li>
-        <li>The Bake counting system is broken as every time I type a singular character it increments the counter by one because of live edits, and refreshing the browser also updates the counter. This will be fixed soon.</li>
       </ul>
       <br>
       <br>
-      <button onclick="location.href='changelog.html';"> <span class="material-symbols-outlined">history</span> What's New</button>
+      <button onclick="location.href='tutorial.html';"> <span class="material-symbols-outlined">description</span> About Bakify</button><button onclick="location.href='changelog.html';"> <span class="material-symbols-outlined">history</span> What's New</button>
       <br>
       <br>
     </div>
@@ -89,3 +86,5 @@
     <script src="assets/scripts/ambient.js"></script>
   </body>
 </html>
+
+<!-- Center Icons: https://stackoverflow.com/questions/39907145/align-material-icon-with-text-on-materialize -->

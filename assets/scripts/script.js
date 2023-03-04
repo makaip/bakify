@@ -1,23 +1,23 @@
 function begin() { // Working
 	//stat();
-	//setTimeout(stat, 0);
-	bake();
+	setTimeout(stat, 0);
+	//bake();
 }
 
-/*
 function stat() {
 	modal(true);
 	const div = document.getElementById('status');
+	var paragraph = document.getElementById('text').textContent;
+	let i = 0;
 	let interval = setInterval(() => {
-		div.innerHTML = (Math.round((i/neverWords.length)*100) + "%");
+		div.innerHTML = (Math.round((i/100)*100) + "%");
 		i++;
-		if (i == neverWords.length) {
+		if (i == 100) {
 		  clearInterval(interval);
 		  bake();
 		}
-	  }, 10);
+	  }, paragraph.length/100);
 } // Working
-*/
 
 // https://stackoverflow.com/questions/32389568/search-for-a-string-from-a-textbox-in-a-textarea
 function bake() {
@@ -52,6 +52,7 @@ function bake() {
 		thing.innerHTML = `<div class=\"suggestion\"><h2>All Good!</h2><p>We didn't find any errors :) </p><br></div>`;
 		document.getElementById('improvements').appendChild(thing);
 	}
+	modal(false);
 } // Working
 
 function recalculate() {
@@ -70,16 +71,6 @@ function recalculate() {
 	}
 	document.getElementById('text').innerHTML = paragraph;
 }
-
-/*
-function highlight(subject) {
-	subjectGlobalized = new RegExp(subject, 'gi');
-	console.log(subjectGlobalized + ' ' + subject);
-	const highlighted = paragraph.replace(subjectGlobalized, '</span><span class=\'word\'>' + subject + '</span><span class=\'other\'>');
-	let paragraph = highlighted;
-	document.getElementById('text').innerHTML = paragraph;
-}
-*/
 
 function suggestTab(word, suggest, location) {
 	const title = word;

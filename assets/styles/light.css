@@ -232,3 +232,9 @@ textarea:focus {
     transform: rotate(360deg);
   }
 }
+
+.material-symbols-outlined {
+  display: inline-flex;
+  vertical-align: middle;
+}
+
