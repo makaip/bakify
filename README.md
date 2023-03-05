@@ -13,14 +13,23 @@ Bakify allows users to scan for over 51 different analytical never-words with we
 
 ## Changelog
 
-### Beta Version v0.4
+### Beta Version 1.5
+
+ - New dynamic suggestions system allows users to "recalculate" their suggestions.
+ - Array reformatted for enhanced optimization.
+ - Icons added to buttons for increased usability.
+ - Dynamic suggestions system vocabulary is not fully capable of contextual blending.
+ - Tutorial page updated for more relevant experience.
+ - Dark mode bug fixed in the tutorial page.
+
+### Beta Version v1.4
 
  - File management and loading times decreased.
  - Ads removed (for now) and gaps in webpage have been filled.
  - New tutorial page added (idk why anyone needs it tho).
  - Overall optimization and updates to comply with AdSense policies.
 
-### Beta Version v0.3
+### Beta Version v1.3
 
  - Bakify now automatically redraws highlighted suggestions when acception an edit.
  - Accepting an edit automatically replaces the text with a synonymous term or applies the edit.
@@ -28,15 +37,14 @@ Bakify allows users to scan for over 51 different analytical never-words with we
  - Dark mode no longer automatically flashes light mode on page load.
  - **[BUG]** Bakify does not recognize adjacent never words.
 
-### Beta Version v0.2
+### Beta Version v1.2
 
  - Bakify highlight system allows users to find neverwords without replacing them.
  - Suggestion system allows users to find synonymous terms, but does not replace them automatically.
  - Automatically switches between light mode and dark mode depending on time of day.
  - Loading system displays progress in a popup window.
 
-
-### Beta Version v0.1
+### Beta Version v1.1
 
  - Docs Extension Deprecated and Replaced with Web Application.
  - New button toggles between light and dark mode.

@@ -1,132 +1,124 @@
 const neverWords =
-  ['1234567890qwertyuiopasdfghjklzxcvbnm',
-  	' I ', 					//1
-  	' me ', 				//2
-  	' my ', 				//3
-  	' we ', 				//4
-  	' our ',  				//5
-  	' us ', 				//6
-  	' you ',  				//7
-  	' your ', 				//8
-  	' society ',  			//9
-  	' human ', 				//10
-  	' feel ',  				//11
-  	' feels ',  			//12
-  	' stuff ', 				//13
-  	' think ', 				//14
-  	' says ',  				//15
-  	' said ', 				//16
-  	' saying ', 			//17
-  	' narrator ',  			//18
-  	' uses ', 				//19
-  	' shows ', 				//20
-  	' This proves ',  		//21
-  	' tells ', 				//22
-  	' good ',  				//23
-  	' bad ', 				//24
-  	' am ',  				//25
-  	' is ', 				//26
-  	' are ', 				//27
-  	' was ',  				//28
-  	' were ', 				//29
-  	' have ', 				//30
-  	' had ',  				//31
-  	' has ',  				//32
-  	' negative ',  			//33
-  	' positive ',  			//34
-  	' like ',  				//35
-  	' person ',  			//36
-  	' people ',  			//37
-  	' everyone ',  			//38
-  	' everything ',  		//39
-  	' anything ',  			//40
-  	' really ',  			//41
-  	' very ',  				//42
-  	'as a whole', 			//43
-  	' someone ', 			//44
-  	' something ', 			//45
-  	' mind ',  				//46
-  	' head ', 				//47
-  	' heart ',  			//48
-  	' brain ',  			//49
-  	' diction ',  			//50
-  	' syntax ',  			//51
-  	' imagery ',  			//52
-	" don't ",				//53
-	" can't ",				//54
-	" won't ",				//55
-	" isn't ",				//56
-	" he's ",				//57
-	" she's ",				//58
-	" they're ",			//59
-	" just ",				//60
-	" reader "				//61
+  [
+	[["1234567890qwertyuiopasdfghjklzxcvbnm"], ["1234567890qwertyuiopasdfghjklzxcvbnm"]],
+  	[[" I "], [" one "]],
+  	[[" me "], [" one "]],
+  	[[" my "], [" ones "]],
+  	[[" we "], [" one "]],
+  	[[" our "], [" ones "]],
+  	[[" us "], [" one "]],
+  	[[" you "], [" one "]], 
+  	[[" your "], [" ones "]],
+  	[[" society "], [" man "]],
+  	[[" human "], [" man "]],
+	[[" humans "], [" men "]],
+  	[[" feel "], [" sense ", " identify ", " appear ", " experience ", " endure "]],
+  	[[" feels "], [" senses ", " identifies ", " appears ", " experiences ", " endures "]],
+	[[" feeling "], [" sensing ", " identifying ", " appearing ", " experiencing ", " enduring ", " tone ", " ambience ", " atmosphere "]],
+  	[[" stuff "], [" material ", " goods ", " belongings "]],
+  	[[" think "], [" assume ", " expect ", " ponder ", " believe "]],
+	[[" thinks "], [" assumes ", " expects ", " ponders ", " believes "]],
+	[[" thinking "], [" assuming ", " expecting ", " pondering ", " believeing "]],
+	[[" say "], [" mention ", " note ", " express ", " suggest ", " hypothesize "]],
+  	[[" says "], [" mentions ", " notes ", " expresses ", " suggests ", " hypothesizes "]],
+  	[[" saying "], [" mentioning ", " noting ", " expressing ", " suggesting ", " hypothesizing "]],
+  	[[" narrator "], [" REMOVE "]],
+	[[" uses "], [" utilize ", " leverage ", " apply "]],
+  	[[" uses "], [" utilizes ", " leverages ", " applies "]],
+	[[" uses "], [" utilizing ", " leveraging ", " applying "]],
+	[[" show "], [" display ", " illuminate ", " indroduce ", " reveal ", " unveil "]],
+  	[[" shows "], [" displays ", " illuminates ", " indroduces ", " reveals ", " unveils "]],
+	[[" showing "], [" displaying ", " illuminating ", " indroducing ", " revealing ", " unveiling "]],
+  	[[" This proves "], [" REMOVE "]],
+	[[" tell "], [" inform ", " notify ", " declare ", " instruct ", " announce "]],
+	[[" tells "], [" informs ", " notifys ", " declares ", " instructs ", " announces "]],
+	[[" telling "], [" informing ", " notifying ", " declaring ", " instructing ", " announcing "]],
+  	[[" good "], [" superior ", " admirable ", " marvelous ", " striking ", " excellent "]],
+  	[[" bad "], [" atrocious ", " inferior ", " pathetic ", " unpleasant ", " sinful ", " wicked "]],
+  	[[" am "], [" exist ", " occur ", " represent ", " symbolize ", " constitute ", " portray ", " embody ", " serve as "]],
+  	[[" is "], [" exists ", " occurs ", " represents ", " symbolizes ", " constitutes ", " portrays ", " embodies ", " serves as "]],
+  	[[" are "], [" exist ", " occur ", " represent ", " symbolize ", " constitute ", " portray ", " embody ", " serve as "]],
+  	[[" was "], [" existed ", " occured ", " represented ", " symbolized ", " constituted ", " portrayed ", " embodied ", " served as "]],
+  	[[" were "], [" existed ", " occured ", " represented ", " symbolized ", " constituted ", " portrayed ", " embodied ", " served as "]],
+  	[[" have "], [" possess ", " include ", " harbor ", " must ", " bear ", " require "]],
+  	[[" had "], [" possessed ", " included ", " harbored ", " required ", " beared "]],
+  	[[" has "], [" possesses ", " includes ", " harbors ", " requires ", " bears "]],
+  	[[" negative "], [" cynical ", " bleak ", " detrimental "]],
+  	[[" positive "], [" beneficial ", " optimistic ", " sanguine ", " certain ", " absolute ", " pure "]],
+  	[[" like "], [" such as ", " similar to ", " enjoy ", " respect ", " admire "]],
+  	[[" person "], [" man "]],
+  	[[" people "], [" men ", " man "]],
+  	[[" everyone "], [" all "]],
+  	[[" everything "], [" all "]],
+  	[[" anything "], [" all "]],
+  	[[" really "], [" REMOVE "], " extremely ", " vastly ", " abundantly ", " exceptionally "],
+  	[[" very "], [" REMOVE ", " extremely ", " vastly ", " abundantly ", " exceptionally "]],
+  	[["as a whole"], [" REMOVE "]],
+  	[[" someone "], [" one "]],
+  	[[" something "], [" an object ", " REMOVE "]],
+  	[[" mind "], [" REMOVE "]],
+  	[[" head "], [" REMOVE "]],
+  	[[" heart "], [" REMOVE "]],
+  	[[" brain "], [" REMOVE "]],
+  	[[" diction "], [" REMOVE "]],
+  	[[" syntax "], [" REMOVE "]],
+  	[[" imagery "], [" REMOVE "]],
+	[[" just "], [" only ", " exclusively ", " fair ", " simply ", " merely ", " scarcely "]],
+	[[" reader "], [" REMOVE "]],
+	[[" aren't "], [" are not "]],
+	[[" can't "], [" can not "]],
+	[[" couldn't "], [" could not "]],
+	[[" didn't "], [" did not "]],
+	[[" doesn't "], [" does not "]],
+	[[" don't "], [" do not "]],
+	[[" hadn't "], [" had not "]],
+	[[" hasn't "], [" has not "]],
+	[[" haven't "], [" have not "]],
+	[[" he'd "], [" he would "]],
+	[[" he'll "], [" he will "]],
+	[[" he's "], [" he is "]],
+	[[" I'd "], [" I would "]],
+	[[" I'll "], [" I will "]],
+	[[" I'm "], [" I am "]],
+	[[" I've "], [" I've "]],
+	[[" isn't "], [" is not "]],
+	[[" let's "], [" let us "]],
+	[[" mightn't "], [" might not "]],
+	[[" mustn't "], [" must not "]],
+	[[" shan't "], [" shall not "]],
+	[[" she'd "], [" she would "]],
+	[[" she'll "], [" she will "]],
+	[[" she's "], [" she is "]],
+	[[" shouldn't "], [" should not "]],
+	[[" that's "], [" that is "]],
+	[[" there's "], [" there is ", " there has ", " there are "]],
+	[[" they'd "], [" the would "]],
+	[[" they'll "], [" they will "]],
+	[[" they're "], [" they are "]],
+	[[" they've "], [" they have "]],
+	[[" we'd "], [" we would "]],
+	[[" we're "], [" we are "]],
+	[[" we've "], [" we have "]],
+	[[" weren't "], [" were not "]],
+	[[" what'll "], [" what will "]],
+	[[" what're "], [" what are "]],
+	[[" what's "], [" what is "]],
+	[[" what've "], [" what have "]],
+	[[" where's "], [" where is "]],
+	[[" who'd "], [" who would "]],
+	[[" who'll "], [" who will "]],
+	[[" who're "], [" who are "]],
+	[[" who's "], [" who is "]],
+	[[" who've "], [" who have "]],
+	[[" won't "], [" will not "]],
+	[[" wouldn't "], [" would not "]],
+	[[" you'd "], [" you would "]],
+	[[" you'll "], [" you will "]],
+	[[" you're "], [" you are "]],
+	[[" you've "], [" you have"]]
 ];
 
-const neverWordReplacemnts =
-  ['1234567890qwertyuiopasdfghjklzxcvbnm',
-  	' one ', 				//1
-  	' one ', 				//2
-  	' ones ', 				//3
-  	' one ',  				//4
-  	' ones ', 				//5
-  	' one ',  				//6
-  	' one ',  				//7
-  	' ones ', 				//8
-  	' man ', 				//9
-  	' man ',  				//10
-  	' experience ',  		//11
-  	' experiences ', 		//12
-  	' objects ', 			//13
-  	' ponder ', 			//14
-  	' expresses ', 			//15
-  	' expressed ', 			//16
-  	' expressing ', 		//17
-  	' REMOVE ', 			//18
-  	' leverages ', 			//19
-  	' reveals ', 			//20
-  	' REMOVE ', 			//21
-  	' explains ', 			//22
-  	' excellent ', 			//23
-  	' appaling ', 			//24
-  	' REMOVE ', 			//25
-  	' represents ', 		//26
-  	' represent ', 			//27
-  	' represented ', 		//28
-	' represented ', 		//29
-  	' obtain ', 			//30
-  	' obtained ', 			//31
-  	' obtains ', 			//32
-  	' antagonistic ', 		//33
-  	' excellent ', 			//34
-  	' simmilar to ', 		//35
-  	' one ', 				//36
-  	' man ', 				//37
-  	' all ', 				//38
-  	' REMOVE ', 			//39
-  	' REMOVE ', 			//40
-  	' REMOVE ', 			//41
-  	' REMOVE ', 			//42
-  	' REMOVE ', 			//43
-  	' one ', 				//44
-  	' an object ', 			//45
-  	' REMOVE ', 			//46
-  	' REMOVE ', 			//47
-  	' REMOVE ', 			//48
-  	' REMOVE ', 			//49
-  	' REMOVE ', 			//50
-  	' REMOVE ', 			//51
-  	' REMOVE ',	 			//52
-	' do not ',				//53
-	' cannot ',				//54
-	' will not ',			//55
-	' is not ',				//56
-	' he is ',				//57
-	' she is ',				//58
-	' they are ',			//59
-	' only ',				//60
-	' REMOVE '				//61
-];
+//const neverWordReplacemnts
 
 const searchResults = [];
 const searchReplacements = [];

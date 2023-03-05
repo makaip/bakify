@@ -6,20 +6,17 @@
     <title>Bakify</title>
     <link rel="assets/images/icon.png" href="assets/images/icon.png"/>
     <link id="theme" rel="stylesheet" type="text/css" href="assets/styles/dark.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0" />
     <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2576138748134475"
      crossorigin="anonymous"></script> -->
   </head>
-  <body onload="defaultTheme()">
+  <body onload="
+  defaultTheme()">
     <br>
     <br>
     <br>
     <h1>Bakify</h1>
-    <p>Beta Version 0.4</p>
-    <button onclick="location.href='tutorial.html';"> <span class="material-symbols-outlined">description</span> Tutorial</button>
+    <p>Beta Version 1.5</p>
     <!-- <button onclick="location.href='about.html';">What is Bakify?</button> -->
     <br>
     <br>
@@ -39,14 +36,14 @@
       <div class="griditem">
         <!-- <textarea id="text" name="text" rows="30"
           cols="80">Elegantly intuitive, Bakify automatically formats anything you write and shows you analytical never words, really making your writing more positive. For example, the about page says Bakify is a “simple website” that inserts “MLA formatting” and scans for “analytical never-words” (Bakify 1). The narrator uses very good diction and imagery to show that Bakify helps you write better as a whole, and can fix anything you say. The monochromatic simplicity of Bakify’s design reflects the conciseness it employs on the text it is fixing. This proves that Bakify is an effective, elegant, and intuitive extension that instantaneously transforms your writing, elevating it to a higher level.</textarea> -->
-        <div id="text" contenteditable="true"><span class='other'>Paste text here using <span class="section">Cmd</span> + <span class="section">Shift</span> + <span class="section">V</span>. </span></div>
+        <div id="text" contenteditable="true"><span class='other'>Paste text here using <span class="section">Cmd</span> + <span class="section">Shift</span> + <span class="section">V</span>. </span><br><br><br><br></div>
         <br>
-        <button style="display: inline; " onclick="toggleTheme()"> <span class="material-symbols-outlined">dark_mode</span> Theme </button>
+        <button style="display: inline;" onclick="toggleTheme()"> <span class="material-symbols-outlined">dark_mode</span> Theme </button>
         <button style="display: inline;" onclick='begin()'> <span class="material-symbols-outlined">oven_gen</span> Bake </button>
         <!-- <button style="display: inline;" onclick='modal(true);'> ModalDebug </button> -->
         <!-- <button style="display: inline;" onclick='suggestTab("Hello")'> debugSuggestion </button> -->
       </div>
-      <div id="improvements" class="griditem" style="width: 265px; border-radius: 8px; border: 2px solid var(--main);">
+      <div id="improvements" class="griditem" style="max-width: 265px; border-radius: 8px; border: 2px solid var(--main); display: none;">
       </div>
     </div>
     <br>
@@ -58,15 +55,13 @@
     <div class="section">
       <br>
       <h2>Please Note</h2>
-      <ul>
-        <li>Bakify is <strong>still in Beta</strong>, meaning that there are a few errors.</li>
+      <ul style="text-align: left;">
         <li>This program <strong> will not </strong> magically fix your essay as it only finds analytical neverwords and offers synonymous terms.</li>
         <li>Please put your text through a grammar checker and proofread after use.</li>
-        <li>The suggestions system is not developed yet and needs improvement.</li>
       </ul>
       <br>
       <br>
-      <button onclick="location.href='changelog.html';"> <span class="material-symbols-outlined">history</span> What's New</button>
+      <button onclick="location.href='tutorial.html';"> <span class="material-symbols-outlined">description</span> About Bakify</button><button onclick="location.href='changelog.html';"> <span class="material-symbols-outlined">history</span> What's New</button>
       <br>
       <br>
     </div>
@@ -82,11 +77,14 @@
     <br>
     <br>
     <p>Source Code: <a href="https://github.com/makaipindell/bakify">GitHub</a></p>
-    <p>Verbs Array: <a href="https://gist.github.com/ijmacdowell/8325491">GitHub</a></p>
     <br>
     <p>Copyright Makai Pindell. 2023.</p>
     <script src="assets/scripts/script.js"></script>
     <script src="assets/scripts/array.js"></script>
     <script src="assets/scripts/ambient.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   </body>
 </html>
+
+<!-- Center Icons: https://stackoverflow.com/questions/39907145/align-material-icon-with-text-on-materialize -->
+<!-- Finding Text: https://stackoverflow.com/questions/32389568/search-for-a-string-from-a-textbox-in-a-textarea -->

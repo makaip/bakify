@@ -6,21 +6,32 @@
     <title>Bakify</title>
     <link rel="assets/images/icon.png" href="assets/images/icon.png"/>
     <link id="theme" rel="stylesheet" type="text/css" href="assets/styles/dark.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0" />
   </head>
-  <body>
+  <body onload="defaultTheme()">
+    <br>
     <br>
     <br>
     <h1>Bakify</h1>
     <p>Tutorial Page</p>
     <br>
-    <button onclick="location.href='index.html';"> Return to Home > </button>
+    <button onclick="location.href='index.html';"> <span class="material-symbols-outlined">home</span> Home</button>
     <br>
     <br>
-    <h2>How to use Bakify</h2>
-    <p>Just paste your paragraph into Bakify with CMD + SHIFT + V and click Bake. </p>
-    <p>To accept a suggestion, (not recomended) simply click the Accept button, even though your writing will probably be better off clicking the Reject button lol.</p>
+    <div class="section">
+      <br>
+      <br>
+      <h2>What is Bakify?</h2>
+      <p style="text-align: left;">Originally designed for Ms. Baker's class, Bakify is an online web application that allows you to scan your writing for analytical never-words and offers synonymous terms as replacements. It (debatably) improves your writing by highlighting weak words that impede your message, and has automatic dark mode that turns on at night. If there are any programmers who have any suggestions, I would love to hear feedback! (built-in form on website). Please note that Bakify is still in beta, meaning not all features are fully available, and Bakify will continue to develop and improve.</p>
+      <br>
+      <h2>Why use Bakify?</h2>
+      <p style="text-align: left;">Bakify allows users to scan for over 118 different analytical never-words with weak verb support coming soon. It reduces the time spent searching for words and can provide synonymous terms automatically within the website. More analytical never-words and weak verbs will be added as Bakify develops.</p>
+      <br>
+      <br>
+    </div>
+
+
+
+    <script src="assets/scripts/ambient.js"></script>
   </body>
 </html>
