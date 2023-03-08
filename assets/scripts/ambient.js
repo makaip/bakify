@@ -70,6 +70,19 @@ function random(min, max) { // min and max included
 	return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
-$('[contenteditable]').on('blur keyup paste', function () {
-	$(this).html($(this).text());
+document.addEventListener('DOMContentLoaded', function () {
+	let pasteButton = document.getElementById("paste");
+	pasteButton.addEventListener('click', function () {
+		navigator.clipboard
+			.readText()
+			.then(
+				cliptext =>
+					(document.getElementById('text').innerText = cliptext),
+				err => console.log(err)
+			);
+	})
 });
+
+function paste() {
+	navigator.clipboard.readText();
+}
