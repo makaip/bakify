@@ -70,6 +70,7 @@ function random(min, max) { // min and max included
 	return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
+https://plainenglish.io/blog/how-to-copy-paste-text-into-clipboard-using-javascript
 document.addEventListener('DOMContentLoaded', function () {
 	let pasteButton = document.getElementById("paste");
 	pasteButton.addEventListener('click', function () {
@@ -82,7 +83,3 @@ document.addEventListener('DOMContentLoaded', function () {
 			);
 	})
 });
-
-function paste() {
-	navigator.clipboard.readText();
-}
