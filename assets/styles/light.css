@@ -38,14 +38,14 @@ li {
   line-height: 1.5;
 }
 
-a {
+a.link {
   color: var(--main);
   margin: 10px 5px;
   font-weight: bold;
   font-family: 'Roboto Mono', monospace;
 }
 
-a:hover {
+a.link:hover {
   background: var(--highlight);
   border-radius: 4px;
 }

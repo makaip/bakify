@@ -1,6 +1,6 @@
 # **Bakify**
 
-![Bakify Logo](assets/images/icon.png)
+<!-- ![Bakify Logo](assets/images/icon.png) -->
 
 ## What is Bakify?
 
