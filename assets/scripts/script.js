@@ -16,7 +16,7 @@ function stat() {
 		  clearInterval(interval);
 		  bake();
 		}
-	  }, paragraph.length/100);
+	  }, paragraph.length/35);
 } // Working
 
 // https://stackoverflow.com/questions/32389568/search-for-a-string-from-a-textbox-in-a-textarea
