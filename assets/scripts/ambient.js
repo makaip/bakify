@@ -10,8 +10,10 @@ function sleep(milliseconds) {
 function modal(present) {
 	console.log('Modal Called');
 	const modal = document.getElementById('myModal');
+	const ad = document.getElementById("adoverlay");
 	if (present == true) {
 		modal.style.display = 'block';
+		ad.style.display = 'block';
 		console.log('Modal: Block');
 	} else {
 		modal.style.display = 'none';
