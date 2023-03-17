@@ -1,7 +1,7 @@
 function begin() { // Working
 	//stat();
-	setTimeout(stat, 0);
-	//bake();
+	//setTimeout(stat, 0);
+	bake();
 }
 
 function stat() {
@@ -36,6 +36,10 @@ function bake() {
 			let r = random(0,l-1);
 			searchReplacements.push(neverWords[i][1][r]);
 			suggestTab(neverWords[i][0], neverWords[i][1][r], i);
+			let adchance = random(1,8);
+			if (adchance == 1) {
+				suggestAd();
+			}
 		}
 	}
 	for (i = 0; i < searchResults.length; i++) { //Highlight
@@ -93,3 +97,14 @@ function acceptEdit(word, suggest, location) {
 	}
 	document.getElementById('text').innerHTML = fixed;
 } // Working
+
+function suggestAd(){
+	const thing = document.createElement('div');
+	thing.innerHTML = `
+	<div class='suggestion' style='text-align: left'>
+  	<button style="display: inline;" onclick='this.parentNode.remove(this);'>X</button>
+	<script data-cfasync='false' type='text/javascript' src='//p456148.clksite.com/adServe/banners?tid=456148_892140_0'></script>
+	</div>
+	`;
+	document.getElementById('improvements').appendChild(thing);
+}

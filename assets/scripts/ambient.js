@@ -61,7 +61,7 @@ function defaultTheme() {
 	const theme = document.getElementById('theme');
 	const hour = new Date().getHours();
 	
-	if (hour >= 18 || hour <= 7) {
+	if (hour >= 19 || hour <= 8) {
 		theme.setAttribute('href', 'assets/styles/dark.css');
 	} else {
 		theme.setAttribute('href', 'assets/styles/light.css');
