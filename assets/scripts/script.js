@@ -4,6 +4,7 @@ function begin() { // Working
 	bake();
 }
 
+/*
 function stat() {
 	modal(true);
 	const div = document.getElementById('status');
@@ -18,6 +19,7 @@ function stat() {
 		}
 	  }, paragraph.length/35);
 } // Working
+*/
 
 // https://stackoverflow.com/questions/32389568/search-for-a-string-from-a-textbox-in-a-textarea
 function bake() {
