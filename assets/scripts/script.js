@@ -58,6 +58,11 @@ function bake() {
 		thing.innerHTML = `<div class=\"suggestion\"><h2>All Good!</h2><p>We didn't find any errors :) </p><br></div>`;
 		document.getElementById('improvements').appendChild(thing);
 	}
+	/*
+	var ad = document.getElementById("ad");
+	var suggestionad = ad.cloneNode(true);
+	document.getElementById("adsuggestion").appendChild(suggestionad);
+	*/
 	modal(false);
 } // Working
 
@@ -103,10 +108,12 @@ function acceptEdit(word, suggest, location) {
 function suggestAd(){
 	const thing = document.createElement('div');
 	thing.innerHTML = `
-	<div class='suggestion' style='text-align: left'>
+	<div id="adsuggestion" class='suggestion' style='text-align: left'>
   	<button style="display: inline;" onclick='this.parentNode.remove(this);'>X</button>
-	<script data-cfasync='false' type='text/javascript' src='//p456148.clksite.com/adServe/banners?tid=456148_892140_0'></script>
 	</div>
 	`;
 	document.getElementById('improvements').appendChild(thing);
 }
+
+//<script type='text/javascript' src='//p456148.clksite.com/adServe/banners?tid=456148_892140_0'></script>
+//
