@@ -1,7 +1,10 @@
 function begin() { // Working
 	//stat();
 	//setTimeout(stat, 0);
+	document.getElementById("bake").style.display = "none";
+	document.getElementById("recalc").style.display = "inline";
 	bake();
+	
 }
 
 /*
@@ -110,6 +113,8 @@ function suggestAd(){
 	thing.innerHTML = `
 	<div id="adsuggestion" class='suggestion' style='text-align: left'>
   	<button style="display: inline;" onclick='this.parentNode.remove(this);'>X</button>
+	<p style="display: inline; float: right;">Ad</p>
+	<script data-cfasync='false' type='text/javascript' src='//p456148.clksite.com/adServe/banners?tid=456148_892140_0'></script>
 	</div>
 	`;
 	document.getElementById('improvements').appendChild(thing);

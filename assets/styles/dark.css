@@ -8,10 +8,12 @@
 ::selection {
   background: var(--highlight);
 }
-html, body {
+html,
+body {
   background-color: var(--sec);
   text-align: center;
 }
+
 h1 {
   font-weight: normal;
   color: var(--main);
@@ -19,6 +21,7 @@ h1 {
   margin: 10px 5px;
   font-family: 'Roboto Mono', monospace;
 }
+
 h2 {
   font-weight: normal;
   color: var(--main);
@@ -26,22 +29,27 @@ h2 {
   margin: 10px 5px;
   font-family: 'Roboto Mono', monospace;
 }
-p, li {
+
+p,
+li {
   color: var(--main);
   margin: 10px 5px;
   font-family: 'Montserrat', sans-serif;
   line-height: 1.5;
 }
+
 a.link {
   color: var(--main);
   margin: 10px 5px;
   font-weight: bold;
   font-family: 'Roboto Mono', monospace;
 }
+
 a.link:hover {
   background: var(--highlight);
   border-radius: 4px;
 }
+
 button {
   margin: 10px 5px;
   transition-duration: 0.2s;
@@ -55,17 +63,20 @@ button {
   vertical-align: middle;
   align-items: center;
 }
+
 button:hover {
   border: 2px solid var(--main);
   background-color: var(--main);
   color: var(--sec);
 }
+
 button:active {
   /* https://codepen.io/EasyBoarder/pen/YqMRMK */
--webkit-box-shadow: inset 1px 1px 5px #333;
--moz-box-shadow:    inset 1px 1px 5px #333;
-box-shadow:         inset 1px 1px 5px #333;
+  -webkit-box-shadow: inset 1px 1px 5px #333;
+  -moz-box-shadow: inset 1px 1px 5px #333;
+  box-shadow: inset 1px 1px 5px #333;
 }
+
 input {
   border-radius: 8px;
   border: 2px solid var(--main);
@@ -75,9 +86,11 @@ input {
   padding: 5px 10px;
   outline: none;
 }
+
 input:focus {
   border: 2px solid var(--main);
 }
+
 .gridcon {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -86,12 +99,14 @@ input:focus {
   margin: auto;
   justify-content: center;
 }
+
 .griditem {
   color: var(--main);
   background-color: var(--sec);
   border: none;
   padding: 0px;
 }
+
 .suggestion {
   margin: 10px 5px;
   transition-duration: 0.2s;
@@ -101,11 +116,15 @@ input:focus {
   color: var(--main);
   padding: 5px 10px;
   width: 225px;
+  animation-name: moveup;
+  animation-duration: 0.25s;
 }
+
 .suggestion:hover {
   transform: scale(1.0125);
   box-shadow: 0px 0px 8px #000000;
 }
+
 .section {
   border-radius: 8px;
   border: 2px solid var(--main);
@@ -117,6 +136,7 @@ input:focus {
   justify-content: center;
   max-width: 750px;
 }
+
 textarea {
   /* transition-duration: 0.2s; */
   border-radius: 8px;
@@ -126,50 +146,64 @@ textarea {
   font-family: 'Roboto Mono', monospace;
   padding: 15px 20px;
   outline: none;
-
+  
 }
+
 textarea:focus {
   border: 2px solid var(--main);
 }
 
 #text {
-    border-radius: 8px;
-    border: 2px solid var(--main);
-    background-color: var(--sec);
-    color: var(--main);
-    font-family: 'Roboto Mono', monospace;
-    padding: 15px 20px;
-    outline: none;
-    max-width: 700px;
-    text-align: left;
+  border-radius: 8px;
+  border: 2px solid var(--main);
+  background-color: var(--sec);
+  color: var(--main);
+  font-family: 'Roboto Mono', monospace;
+  padding: 15px 20px;
+  outline: none;
+  max-width: 700px;
+  text-align: left;
 }
+
 #text:focus {
   border: 2px solid var(--main);
 }
+
 .word {
   font-weight: bold;
   background-color: var(--highlight);
   font-family: 'Roboto Mono', monospace;
   border-radius: 4px;
 }
+
 .other {
   color: var(--main);
   font-family: 'Roboto Mono', monospace;
 }
 
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
 }
+
 .modal-content {
   background-color: var(--sec);
   margin: auto;
@@ -179,10 +213,13 @@ textarea:focus {
   max-width: 600px;
   min-width: 250px;
   border-radius: 8px;
+  animation-name: moveup;
+  animation-duration: 0.25s;
 }
 
 .loader {
-  border: 16px solid #1c2333; /* Light grey */
+  border: 16px solid #1c2333;
+  /* Light grey */
   border-top: 16px solid var(--main);
   border-radius: 50%;
   width: 120px;
@@ -192,9 +229,15 @@ textarea:focus {
   justify-self: center;
   margin: auto;
 }
+
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .material-symbols-outlined {
@@ -220,4 +263,9 @@ textarea:focus {
   border: solid; 
   border-color: var(--main);
   border-radius: 8px;
+}
+
+@keyframes moveup {
+  from {transform: translateY(50px);}
+  to {transform: translateY(0px);}
 }

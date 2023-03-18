@@ -116,6 +116,8 @@ input:focus {
   color: var(--main);
   padding: 5px 10px;
   width: 225px;
+  animation-name: moveup;
+  animation-duration: 0.25s;
 }
 
 .suggestion:hover {
@@ -211,6 +213,8 @@ textarea:focus {
   max-width: 600px;
   min-width: 250px;
   border-radius: 8px;
+  animation-name: moveup;
+  animation-duration: 0.25s;
 }
 
 .loader {
@@ -259,4 +263,9 @@ textarea:focus {
   border: solid; 
   border-color: var(--main);
   border-radius: 8px;
+}
+
+@keyframes moveup {
+  from {transform: translateY(50px);}
+  to {transform: translateY(0px);}
 }
