@@ -11,10 +11,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Mono&display=swap" rel="stylesheet">
     -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0" />
-    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0"/>
   </head>
-  <body onload="defaultTheme()">
+
+  <body onload="defaultTheme(); info(true);">
+    <div id="info" class="modal">
+      <div class="modal-content">
+        <button style="float: right;" onclick="info(false)">X</button>
+        <br>
+        <br>
+        <br>
+        <h2>Announcement</h2>
+        <p>Bakify is currently experiencing difficulties with advertising networks and malicious popup advertising. We are working very hard to prevent popups from occuring but each time an advertising banner is added, it creates spontaneous popups with it. If you experience a malicious popup, please email us at <a href="mailto:bakify.edu@gmail.com" class="link">bakify.edu@gmail.com</a> with full details.</p>
+        <br>
+        <p>Thank you!</p>
+        <br>
+        <br>
+        <br>
+      </div>
+    </div>
+    <script data-cfasync='false' type='text/javascript' src='//p456148.clksite.com/adServe/banners?tid=456148_892140_8&tagid=9'></script>
+
     <div class="section">
       <button onclick="location.href='tutorial.html';"> <span class="material-symbols-outlined">description</span> About
       </button>
@@ -31,17 +48,18 @@
     <p>Version 1.5</p>
     <br>
     <br>
+    <!--
     <div id="myModal" class="modal">
       <div class="modal-content">
         <h2>Please Wait</h2>
         <p id="status">Loading...</p>
         <br>
-        <!-- <script data-cfasync="false" type="text/javascript" src="//buzzonclick.com/a/display.php?r=6829410" async></script> -->
         <br>
         <br>
         <br>
       </div>
     </div>
+    -->
     <div class="gridcon">
       <div class="griditem">
         <div id="text" contenteditable="true"><span class='other'>Elegantly intuitive, Bakify automatically formats anything you write and shows you analytical never words, really making your writing more positive. For example, the about page says Bakify is a “simple website” that inserts “MLA formatting” and scans for “analytical never-words” (Bakify 1). The narrator uses very good diction and imagery to show that Bakify helps you write better as a whole, and can fix anything you say. The monochromatic simplicity of Bakify’s design reflects the conciseness it employs on the text it is fixing. This proves that Bakify is an effective, elegant, and intuitive extension that instantaneously transforms your writing, elevating it to a higher level.</span><br></div>
@@ -57,12 +75,15 @@
     <br>
     <br>
     <br>
-    <!-- REVENUEHITS ADS BANNER
-    <div style="max-width: 450px; margin: auto; justify-content: center; text-align: center;">
-      <script data-cfasync='false' type='text/javascript'
-        src='//p456148.clksite.com/adServe/banners?tid=456148_892140_3'></script>
+    <!-- REVENUEHITS ADS BANNER -->
+    <div class="midad" id="midad">
+      <button style="float: right;" onclick="document.getElementById('midad').style.display = 'none'">X</button>
+      <script data-cfasync='false' type='text/javascript' src='//p456148.clksite.com/adServe/banners?tid=456148_892140_3' async></script>
+      <br>
+      <br>
+      <br>
+      <br>
     </div>
-    -->
     <br>
     <br>
     <div class="section">
@@ -100,8 +121,13 @@
     <script data-cfasync='false' type='text/javascript' src='//p456148.clksite.com/adServe/banners?tid=456148_892140_6&type=slider&side=left&size=9&position=center&animate=on'></script>
     <script data-cfasync='false' type='text/javascript' src='//p456148.clksite.com/adServe/banners?tid=456148_892140_7&type=slider&side=right&size=9&position=center&animate=on'></script>
     -->
+    <!-- REVENUEHITS ADS THIN SIDEBARS -->
+    <script data-cfasync='false' type='text/javascript' src='//p456148.clksite.com/adServe/banners?tid=456148_892140_10&type=slider&side=left&size=4&position=center&close=enable&animate=on'></script>
+    <script data-cfasync='false' type='text/javascript' src='//p456148.clksite.com/adServe/banners?tid=456148_892140_11&type=slider&side=right&size=4&position=center&animate=on'></script>
+
     <!-- SKIMLINKS -->
     <script type="text/javascript" src="https://s.skimresources.com/js/234914X1717766.skimlinks.js"></script>
+    
   </body>
 </html>
 

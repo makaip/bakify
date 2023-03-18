@@ -21,6 +21,18 @@ function modal(present) {
 	}
 }
 
+function info(present) {
+	console.log("Info Called");
+	const info = document.getElementById('info');
+	if (present == true) {
+		info.style.display = "block";
+		console.log("Info Displayed");
+	} else {
+		info.style.display = "none";
+		console.log("Info Hidden");
+	}
+}
+
 function displayBox(present) {
 	console.log('Modal Called');
 	const suggestionsBox = document.getElementById('improvements');

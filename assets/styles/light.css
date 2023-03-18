@@ -207,7 +207,9 @@ textarea:focus {
   margin: auto;
   padding: 20px;
   border: 2px solid var(--main);
-  width: 40%;
+  width: 50%;
+  max-width: 600px;
+  min-width: 250px;
   border-radius: 8px;
 }
 
@@ -239,3 +241,22 @@ textarea:focus {
   vertical-align: middle;
 }
 
+.sticky {
+  border-color: var(--main);
+  border-width: 2px;
+  border: solid;
+  border-radius: 8px;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+.midad {
+  max-width: 450px; 
+  margin: auto; 
+  justify-content: center; 
+  text-align: center; 
+  border: solid; 
+  border-color: var(--main);
+  border-radius: 8px;
+}
