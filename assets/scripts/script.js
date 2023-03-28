@@ -40,10 +40,12 @@ function bake() {
 			let r = random(0,l-1);
 			searchReplacements.push(neverWords[i][1][r]);
 			suggestTab(neverWords[i][0], neverWords[i][1][r], i);
+			/*
 			let adchance = random(1,8);
 			if (adchance == 1) {
 				suggestAd();
 			}
+			*/
 		}
 	}
 	for (i = 0; i < searchResults.length; i++) { //Highlight
