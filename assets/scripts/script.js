@@ -4,7 +4,6 @@ function begin() { // Working
 	document.getElementById("bake").style.display = "none";
 	document.getElementById("recalc").style.display = "inline";
 	bake();
-	
 }
 
 /*
@@ -108,6 +107,7 @@ function acceptEdit(word, suggest, location) {
 	document.getElementById('text').innerHTML = fixed;
 } // Working
 
+/*
 function suggestAd(){
 	const thing = document.createElement('div');
 	thing.innerHTML = `
@@ -119,6 +119,6 @@ function suggestAd(){
 	`;
 	document.getElementById('improvements').appendChild(thing);
 }
+*/
 
 //<script type='text/javascript' src='//p456148.clksite.com/adServe/banners?tid=456148_892140_0'></script>
-//

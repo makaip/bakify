@@ -60,9 +60,6 @@ const neverWords =
   	[[" head "], [" REMOVE "]],
   	[[" heart "], [" REMOVE "]],
   	[[" brain "], [" REMOVE "]],
-  	[[" diction "], [" REMOVE "]],
-  	[[" syntax "], [" REMOVE "]],
-  	[[" imagery "], [" REMOVE "]],
 	[[" just "], [" only ", " exclusively ", " fair ", " simply ", " merely ", " scarcely "]],
 	[[" reader "], [" REMOVE "]],
 	[[" aren't "], [" are not "]],
@@ -115,9 +112,9 @@ const neverWords =
 	[[" you'd "], [" you would "]],
 	[[" you'll "], [" you will "]],
 	[[" you're "], [" you are "]],
-	[[" you've "], [" you have"]]
+	[[" you've "], [" you have "]],
+	[["Rick Astley"], ["https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"]]
 ];
-
 //const neverWordReplacemnts
 
 const searchResults = [];
