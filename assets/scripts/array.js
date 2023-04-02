@@ -12,6 +12,8 @@ const neverWords =
   	[[" society "], [" man "]],
   	[[" human "], [" man "]],
 	[[" humans "], [" men "]],
+
+	//VERBS
   	[[" feel "], [" sense ", " identify ", " appear ", " experience ", " endure "]],
   	[[" feels "], [" senses ", " identifies ", " appears ", " experiences ", " endures "]],
 	[[" feeling "], [" sensing ", " identifying ", " appearing ", " experiencing ", " enduring ", " tone ", " ambience ", " atmosphere "]],
@@ -33,18 +35,25 @@ const neverWords =
 	[[" tell "], [" inform ", " notify ", " declare ", " instruct ", " announce "]],
 	[[" tells "], [" informs ", " notifys ", " declares ", " instructs ", " announces "]],
 	[[" telling "], [" informing ", " notifying ", " declaring ", " instructing ", " announcing "]],
-  	[[" good "], [" superior ", " admirable ", " marvelous ", " striking ", " excellent "]],
-  	[[" bad "], [" atrocious ", " inferior ", " pathetic ", " unpleasant ", " sinful ", " wicked "]],
+
   	[[" am "], [" exist ", " occur ", " represent ", " symbolize ", " constitute ", " portray ", " embody ", " serve as "]],
   	[[" is "], [" exists ", " occurs ", " represents ", " symbolizes ", " constitutes ", " portrays ", " embodies ", " serves as "]],
   	[[" are "], [" exist ", " occur ", " represent ", " symbolize ", " constitute ", " portray ", " embody ", " serve as "]],
   	[[" was "], [" existed ", " occured ", " represented ", " symbolized ", " constituted ", " portrayed ", " embodied ", " served as "]],
   	[[" were "], [" existed ", " occured ", " represented ", " symbolized ", " constituted ", " portrayed ", " embodied ", " served as "]],
+	[[" be "], [" "]],
+	[[" been "], [" "]],
+	[[" being "], [" existing ", " occuring ", " representing ", " symbolizing ", " constituting ", " portraying ", " embodying ", " serving as "]],
+
   	[[" have "], [" possess ", " include ", " harbor ", " must ", " bear ", " require "]],
   	[[" had "], [" possessed ", " included ", " harbored ", " required ", " beared "]],
   	[[" has "], [" possesses ", " includes ", " harbors ", " requires ", " bears "]],
+
+	//ADJECTIVES + MIS
   	[[" negative "], [" cynical ", " bleak ", " detrimental "]],
   	[[" positive "], [" beneficial ", " optimistic ", " sanguine ", " certain ", " absolute ", " pure "]],
+	[[" good "], [" superior ", " admirable ", " marvelous ", " striking ", " excellent "]],
+  	[[" bad "], [" atrocious ", " inferior ", " pathetic ", " unpleasant ", " sinful ", " wicked "]],
   	[[" like "], [" such as ", " similar to ", " enjoy ", " respect ", " admire "]],
   	[[" person "], [" man "]],
   	[[" people "], [" men ", " man "]],
@@ -62,6 +71,12 @@ const neverWords =
   	[[" brain "], [" REMOVE "]],
 	[[" just "], [" only ", " exclusively ", " fair ", " simply ", " merely ", " scarcely "]],
 	[[" reader "], [" REMOVE "]],
+	[[" chapter "], [" REMOVE "]],
+	[["In the beginning,"], [" REMOVE "]],
+	[["In the middle,"], [" REMOVE "]],
+	[["In the end,"], [" REMOVE "]],
+
+	//CONTRACTIONS
 	[[" aren't "], [" are not "]],
 	[[" can't "], [" can not "]],
 	[[" couldn't "], [" could not "]],
