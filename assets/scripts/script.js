@@ -124,3 +124,17 @@ function suggestAd(){
 */
 
 //<script type='text/javascript' src='//p456148.clksite.com/adServe/banners?tid=456148_892140_0'></script>
+
+function train() {
+
+}
+
+function grade() {
+	$.ajax({
+		type: "POST",
+		url: "~/assets/bot/pythoncode.py",
+		data: {param: document.getElementById()}
+	  }).done(function( o ) {
+		 // do something
+	  });
+}
