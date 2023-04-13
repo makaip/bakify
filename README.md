@@ -13,12 +13,12 @@ Bakify allows users to scan for over 51 different analytical never-words with we
 
 ## Changelog
 
-### Beta Version 1.5
+### **Beta Version 1.5**
 
  - New dynamic suggestions system allows users to "recalculate" their suggestions.
  - Array reformatted for enhanced optimization.
  - Icons added to buttons for increased usability.
- - Dynamic suggestions system vocabulary is not fully capable of contextual blending.
+ - <span style="color:red">**[BUG]**</span> Dynamic suggestions system vocabulary is not fully capable of contextual blending.
  - Tutorial page updated for more relevant experience.
  - Dark mode bug fixed in the tutorial page.
 
@@ -35,7 +35,7 @@ Bakify allows users to scan for over 51 different analytical never-words with we
  - Accepting an edit automatically replaces the text with a synonymous term or applies the edit.
  - Custom highlight colors and faster loading times.
  - Dark mode no longer automatically flashes light mode on page load.
- - **[BUG]** Bakify does not recognize adjacent never words.
+ - <span style="color:red">**[BUG]**</span> Bakify does not recognize adjacent never words.
 
 ### Beta Version v1.2
 
