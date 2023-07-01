@@ -52,7 +52,7 @@ function displayBox(present) {
 cookiesDisabled = false;
 function toggleTheme() {
 	const theme = document.getElementById('theme');
-	if(!(localStorage.cookies || cookiesDisabled) {
+	if(!(localStorage.cookies || cookiesDisabled)) {
 		if(confirm("Would you like us to use cookies to remember your choice?")) {
 			localStorage.cookies = "allowed";
 		} else {
@@ -101,7 +101,7 @@ Written by Makai Pindell
 		} else {
 			theme.href = "assets/styles/dark.css";
 		}
-	}, 1000);
+	}, 10);
 }
 
 function random(min, max) { // min and max included 
