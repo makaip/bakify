@@ -59,7 +59,7 @@ function toggleTheme() {
 			cookiesDisabled = true;
 		}
 	}
-	if (theme.href == 'assets/styles/light.css') {
+	if (theme.getAttribute("href") == 'assets/styles/light.css') {
 		selectedTheme = "dark";
 		if(!cookiesDisabled) {localStorage.theme = "dark"};
 	} else {
