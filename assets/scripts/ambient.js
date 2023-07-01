@@ -1,17 +1,20 @@
 // https://www.sitepoint.com/delay-sleep-pause-wait/
-function sleep(milliseconds) {
-	const date = Date.now();
-	let currentDate = null;
+function sleep(milliseconds) {							/*
+	Note: I edited this so it would support fractions of milliseconds by
+ 	using the performance object instead of the Date object.
+  		- George							*/
+	const start = performance.now();
+	let current = null;
 	do {
-		currentDate = Date.now();
-	} while (currentDate - date < milliseconds);
+		current = performance.now();
+	} while (current - start < milliseconds);
 }
 
 function modal(present) {
 	console.log('Modal Called');
 	const modal = document.getElementById('myModal');
 	const ad = document.getElementById("adoverlay");
-	if (present == true) {
+	if (present) {
 		modal.style.display = 'block';
 		ad.style.display = 'block';
 		console.log('Modal: Block');
@@ -24,7 +27,7 @@ function modal(present) {
 function info(present) {
 	console.log("Info Called");
 	const info = document.getElementById('info');
-	if (present == true) {
+	if (present) {
 		info.style.display = "block";
 		console.log("Info Displayed");
 	} else {
@@ -36,7 +39,7 @@ function info(present) {
 function displayBox(present) {
 	console.log('Modal Called');
 	const suggestionsBox = document.getElementById('improvements');
-	if (present == true) {
+	if (present) {
 		suggestionsBox.style.display = 'block';
 		console.log('Suggestions: Block');
 	} else {
@@ -46,54 +49,75 @@ function displayBox(present) {
 }
 
 // https://www.geeksforgeeks.org/how-to-switch-between-multiple-css-stylesheets-using-javascript/
+cookiesDisabled = false;
 function toggleTheme() {
 	const theme = document.getElementById('theme');
-	if (theme.getAttribute('href') == 'assets/styles/light.css') {
-		theme.setAttribute('href', 'assets/styles/dark.css');
+	if(!(localStorage.cookies || cookiesDisabled) {
+		if(confirm("Would you like us to use cookies to remember your choice?")) {
+			localStorage.cookies = "allowed";
+		} else {
+			cookiesDisabled = false;
+		}
+	}
+	if (theme.href == 'assets/styles/light.css') {
+		selectedTheme = "dark";
+		if(!cookiesDisabled) {localStorage.theme = "dark"};
 	} else {
-		theme.setAttribute('href', 'assets/styles/light.css');
+		selectedTheme = "light";
+		if(!cookiesDisabled) {localStorage.theme = "light"};
 	}
 }
 
-// https://stackoverflow.com/questions/18031410/javascript-if-time-is-between-7pm-and-7am-do-this
+
 function defaultTheme() { 
-	console.log('Welcome to the cool kids club i guess');
-	console.log('Enjoy some cool ascii art.');
-	console.log('');
-	console.log('');
-	console.log('██████╗░░█████╗░██╗░░██╗██╗███████╗██╗░░░██╗');
-	console.log('██╔══██╗██╔══██╗██║░██╔╝██║██╔════╝╚██╗░██╔╝');
-	console.log('██████╦╝███████║█████═╝░██║█████╗░░░╚████╔╝░');
-	console.log('██╔══██╗██╔══██║██╔═██╗░██║██╔══╝░░░░╚██╔╝░░');
-	console.log('██████╦╝██║░░██║██║░╚██╗██║██║░░░░░░░░██║░░░');
-	console.log('╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝╚═╝░░░░░░░░╚═╝░░░');
-	console.log('Written by Makai Pindell');
-	console.log('');
+	console.log(` 
+Welcome to the cool kids club i guess
+Enjoy some cool ascii art.
+
+
+██████╗░░█████╗░██╗░░██╗██╗███████╗██╗░░░██╗
+██╔══██╗██╔══██╗██║░██╔╝██║██╔════╝╚██╗░██╔╝
+██████╦╝███████║█████═╝░██║█████╗░░░╚████╔╝░
+██╔══██╗██╔══██║██╔═██╗░██║██╔══╝░░░░╚██╔╝░░
+██████╦╝██║░░██║██║░╚██╗██║██║░░░░░░░░██║░░░
+╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝╚═╝░░░░░░░░╚═╝░░░
+Written by Makai Pindell
+ `);
 
 	const theme = document.getElementById('theme');
 	const hour = new Date().getHours();
-	
-	if (hour >= 19 || hour <= 7) {
-		theme.setAttribute('href', 'assets/styles/dark.css');
-	} else {
-		theme.setAttribute('href', 'assets/styles/light.css');
-	}
+	window.selectedTheme = localStorage.theme ? localStorage.theme : "default";
+
+	setInterval(() => {
+		// https://stackoverflow.com/questions/18031410/javascript-if-time-is-between-7pm-and-7am-do-this
+		if(selectedTheme == "default") {
+			if (hour >= 19 || hour <= 7) {
+				theme.href = 'assets/styles/dark.css';
+			} else {
+				theme.href = 'assets/styles/light.css';
+			}
+		} else if (selectedTheme == "light") {
+			theme.href = "assets/styles/light.css";
+		} else {
+			theme.href = "assets/styles/dark.css";
+		}
+	}, 1000);
 }
 
 function random(min, max) { // min and max included 
 	return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
-https://plainenglish.io/blog/how-to-copy-paste-text-into-clipboard-using-javascript
-document.addEventListener('DOMContentLoaded', function () {
+// https://plainenglish.io/blog/how-to-copy-paste-text-into-clipboard-using-javascript
+document.onload = () => {
 	let pasteButton = document.getElementById("paste");
-	pasteButton.addEventListener('click', function () {
+	pasteButton.onclick = () => {
 		navigator.clipboard
 			.readText()
 			.then(
 				cliptext =>
 					(document.getElementById('text').innerText = cliptext),
-				err => console.log(err)
+				err => console.error("Clipboard Error:\n\n" + err)
 			);
 	})
 });
