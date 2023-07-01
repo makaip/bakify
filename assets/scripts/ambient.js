@@ -49,14 +49,14 @@ function displayBox(present) {
 }
 
 // https://www.geeksforgeeks.org/how-to-switch-between-multiple-css-stylesheets-using-javascript/
-cookiesDisabled = false;
+let cookiesDisabled = false;
 function toggleTheme() {
 	const theme = document.getElementById('theme');
 	if(!(localStorage.cookies || cookiesDisabled)) {
 		if(confirm("Would you like us to use cookies to remember your choice?")) {
 			localStorage.cookies = "allowed";
 		} else {
-			cookiesDisabled = false;
+			cookiesDisabled = true;
 		}
 	}
 	if (theme.href == 'assets/styles/light.css') {
@@ -119,5 +119,5 @@ document.onload = () => {
 					(document.getElementById('text').innerText = cliptext),
 				err => console.error("Clipboard Error:\n\n" + err)
 			);
-	})
-});
+	}
+};
