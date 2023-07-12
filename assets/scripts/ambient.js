@@ -90,11 +90,7 @@ Enjoy some cool ascii art.
 	setInterval(() => {
 		// https://stackoverflow.com/questions/18031410/javascript-if-time-is-between-7pm-and-7am-do-this
 		if(selectedTheme == "default") {
-			if (hour >= 19 || hour <= 7) {
-				theme.href = 'assets/styles/dark.css';
-			} else {
-				theme.href = 'assets/styles/light.css';
-			}
+			
 		} else if (selectedTheme == "light") {
 			theme.href = "assets/styles/light.css";
 		} else {
