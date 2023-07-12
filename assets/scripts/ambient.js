@@ -81,7 +81,6 @@ Enjoy some cool ascii art.
 ██╔══██╗██╔══██║██╔═██╗░██║██╔══╝░░░░╚██╔╝░░
 ██████╦╝██║░░██║██║░╚██╗██║██║░░░░░░░░██║░░░
 ╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝╚═╝░░░░░░░░╚═╝░░░
-Written by Makai Pindell
  `);
 
 	const theme = document.getElementById('theme');
