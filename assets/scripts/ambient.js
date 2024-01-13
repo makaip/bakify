@@ -71,7 +71,7 @@ function toggleTheme() {
 
 function defaultTheme() { 
 	console.log(` 
-Welcome to the cool kids club i guess
+Welcome to the club i guess
 Enjoy some cool ascii art.
 
 
@@ -116,3 +116,4 @@ document.onload = () => {
 			);
 	}
 };
+
