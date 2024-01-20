@@ -132,23 +132,6 @@ const neverWords =
 ];
 //const neverWordReplacemnts
 
-const clevWords = [
-	[[" a lot "], [" a copious portion ", " an abundance ", " significant ammount "]],
-	[[" always "], [" often ", " frequently ", " repeatedly ", " usually ", " generally "]],
-	[[" never "], [" seldom ", " rarely ", " infrequently ", " scarcely "]],
-
-
-	[[" things "], [" goods ", " products ", " merchandise ", " commodities "]],
-	[[" stuff "], [" goods ", " products ", " merchandise ", " commodities "]],
-	[[" items "], [" goods ", " products ", " merchandise ", " commodities "]],
-
-
-	[[" increased "], [" led to a significant increase in ", " accentuated the presence of ", " resulted in the exponential growth regarding "]]
-	
-	
-]
-
-
 const searchResults = [];
 const searchReplacements = [];
 
