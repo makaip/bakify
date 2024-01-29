@@ -95,6 +95,7 @@ const neverWords =
 	[["The evidence shows"], [" REMOVE "]],
 	[["The quote proves"], [" REMOVE "]],
 	[["The quote shows"], [" REMOVE "]],
+  [[" sentence "], [" REMOVE" ]],
 
 	//CONTRACTIONS
 	[[" aren't "], [" are not "]],
