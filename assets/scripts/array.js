@@ -22,7 +22,7 @@ const neverWords =
 	[[" thinks "], [" assumes ", " expects ", " ponders ", " believes "]],
 	[[" thinking "], [" assuming ", " expecting ", " pondering ", " believeing "]],
 	[[" say "], [" mention ", " note ", " express ", " suggest ", " hypothesize "]],
-  	[[" says "], [" mentions ", " notes ", " expresses ", " suggests ", " hypothesizes"]],
+  	[[" says "], [" mentions ", " notes ", " expresses ", " suggests ", " hypothesizes "]],
 	[[" said "], [" REMOVE "]],
   	[[" saying "], [" mentioning ", " noting ", " expressing ", " suggesting ", " hypothesizing "]],
   	[[" narrator "], [" REMOVE "]],
