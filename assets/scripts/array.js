@@ -97,6 +97,7 @@ const neverWords =
 	[["The quote shows"], [" REMOVE "]],
   [[" sentence "], [" REMOVE" ]],
   [["Throughout the novel,"], [" REMOVE "]],
+  [[" which "], [" REMOVE "]],
 
 	//CONTRACTIONS
 	[[" aren't "], [" are not "]],
