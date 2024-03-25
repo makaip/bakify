@@ -22,7 +22,7 @@ const neverWords =
 	[[" thinks "], [" assumes ", " expects ", " ponders ", " believes "]],
 	[[" thinking "], [" assuming ", " expecting ", " pondering ", " believeing "]],
 	[[" say "], [" mention ", " note ", " express ", " suggest ", " hypothesize "]],
-  	[[" says "], [" mentions ", " notes ", " expresses ", " suggests ", " hypothesizes"]],
+  	[[" says "], [" mentions ", " notes ", " expresses ", " suggests ", " hypothesizes "]],
 	[[" said "], [" REMOVE "]],
   	[[" saying "], [" mentioning ", " noting ", " expressing ", " suggesting ", " hypothesizing "]],
   	[[" narrator "], [" REMOVE "]],
@@ -95,6 +95,9 @@ const neverWords =
 	[["The evidence shows"], [" REMOVE "]],
 	[["The quote proves"], [" REMOVE "]],
 	[["The quote shows"], [" REMOVE "]],
+  [[" sentence "], [" REMOVE" ]],
+  [["Throughout the novel,"], [" REMOVE "]],
+  [[" which "], [" REMOVE "]],
 
 	//CONTRACTIONS
 	[[" aren't "], [" are not "]],
