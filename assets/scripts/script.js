@@ -29,62 +29,108 @@ function bake() {
 	displayBox(true);
 	searchResults.length = 0;
 	searchReplacements.length = 0;
-	var paragraph = document.getElementById('text').textContent; // <--- Global Variable ????
+	var paragraph = document.getElementById('text').textContent; // Get plain text for detection
 	document.getElementById('improvements').replaceChildren([]);
+	
+	// First, detect all the never words
 	for (i = 0; i < neverWords.length; i++) {
-		console.log('Bake Iteration' + neverWords[i][0] + " " + i);
-		if (neverWords.length > 0 && paragraph.indexOf(neverWords[i][0]) > -1) { // <-- idk what this does lol
-			console.log('True Bake Iteration' + neverWords[i][0]);
-			searchResults.push(neverWords[i][0]);
-			let l = neverWords[i][1].length;
-			let r = random(0,l-1);
-			searchReplacements.push(neverWords[i][1][r]);
-			suggestTab(neverWords[i][0], neverWords[i][1][r], i);
-			/*
-			let adchance = random(1,8);
-			if (adchance == 1) {
-				suggestAd();
+		// Check if the array structure exists to prevent errors
+		if (!neverWords[i] || !neverWords[i][0] || !neverWords[i][0][0]) {
+			console.log('Skipping invalid entry at index:', i);
+			continue;
+		}
+		
+		let searchWord = neverWords[i][0][0]; // Get the word from nested array
+		console.log('Bake Iteration: ' + searchWord + " at index " + i);
+		
+		// Remove leading/trailing spaces and create word boundary regex
+		let cleanWord = searchWord.trim();
+		if (cleanWord === '') continue; // Skip empty words
+		
+		let wordPattern = new RegExp('\\b' + cleanWord.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'gi');
+		
+		if (wordPattern.test(paragraph)) {
+			console.log('Found neverword: ' + cleanWord);
+			searchResults.push(cleanWord); // Store the clean word for highlighting
+			
+			// Get replacement suggestions
+			let replacements = neverWords[i][1];
+			if (replacements && replacements.length > 0) {
+				let r = random(0, replacements.length - 1);
+				searchReplacements.push(replacements[r]);
+				suggestTab(searchWord, replacements[r], i);
 			}
-			*/
 		}
 	}
-	for (i = 0; i < searchResults.length; i++) { //Highlight
-		subjectGlobalized = new RegExp(searchResults[i], 'gi');
-		console.log(subjectGlobalized + ' ' + searchResults[i]);
-		const highlighted = paragraph.replace(subjectGlobalized, '</span><span class=\'word\'>' + searchResults[i] + '</span><span class=\'other\'>');
-		var paragraph = highlighted;
+	
+	console.log('Words found for highlighting:', searchResults);
+	
+	// Now apply highlighting - start with plain text and build HTML
+	var highlightedText = paragraph;
+	
+	// Apply highlighting for each found word
+	for (i = 0; i < searchResults.length; i++) {
+		let cleanWord = searchResults[i];
+		let wordPattern = new RegExp('\\b' + cleanWord.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'gi');
+		console.log('Highlighting word: ' + cleanWord);
+		
+		// Replace each occurrence with highlighted version
+		highlightedText = highlightedText.replace(wordPattern, function(match) {
+			console.log('Replacing match:', match);
+			return '<span class="word">' + match + '</span>';
+		});
 	}
-	document.getElementById('text').innerHTML = paragraph;
+	
+	// Wrap the entire text in the 'other' span and set innerHTML
+	document.getElementById('text').innerHTML = '<span class="other">' + highlightedText + '</span>';
+	
+	console.log('Final highlighted HTML:', document.getElementById('text').innerHTML);
 	console.log('Final array: ' + searchResults);
 	console.log('Final solutions: ' + searchReplacements);
+	
 	if (searchResults.length == 0) { //Handle No Neverwords
 		const thing = document.createElement('div');
 		thing.innerHTML = `<div class=\"suggestion\"><h2>All Good!</h2><p>We didn't find any errors :) </p><br></div>`;
 		document.getElementById('improvements').appendChild(thing);
 	}
-	/*
-	var ad = document.getElementById("ad");
-	var suggestionad = ad.cloneNode(true);
-	document.getElementById("adsuggestion").appendChild(suggestionad);
-	*/
 	modal(false);
 } // Working
 
 function recalculate() {
 	console.log('Recalculating');
 	const recalculatedResults = [];
-	paragraph = document.getElementById('text').textContent;
+	paragraph = document.getElementById('text').textContent; // Get plain text
+	
+	// Find all never words in the current text
 	for (i = 0; i < neverWords.length; i++) {
-		if (neverWords.length > 0 && paragraph.indexOf(neverWords[i][0]) > -1) {
-			recalculatedResults.push(neverWords[i][0]);
+		// Check if the array structure exists
+		if (!neverWords[i] || !neverWords[i][0] || !neverWords[i][0][0]) {
+			continue;
+		}
+		
+		let searchWord = neverWords[i][0][0];
+		let cleanWord = searchWord.trim();
+		if (cleanWord === '') continue;
+		
+		let wordPattern = new RegExp('\\b' + cleanWord.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'gi');
+		
+		if (wordPattern.test(paragraph)) {
+			recalculatedResults.push(cleanWord);
 		}
 	}
+	
+	// Apply highlighting
+	var highlightedText = paragraph;
 	for (i = 0; i < recalculatedResults.length; i++) {
-		subjectGlobalized = new RegExp(recalculatedResults[i], 'gi');
-		const highlighted = paragraph.replace(subjectGlobalized, '</span><span class=\'word\'>' + recalculatedResults[i] + '</span><span class=\'other\'>');
-		var paragraph = highlighted;
+		let cleanWord = recalculatedResults[i];
+		let wordPattern = new RegExp('\\b' + cleanWord.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'gi');
+		highlightedText = highlightedText.replace(wordPattern, function(match) {
+			return '<span class="word">' + match + '</span>';
+		});
 	}
-	document.getElementById('text').innerHTML = paragraph;
+	
+	// Set the highlighted HTML
+	document.getElementById('text').innerHTML = '<span class="other">' + highlightedText + '</span>';
 }
 
 function suggestTab(word, suggest, location) {
@@ -98,15 +144,20 @@ function suggestTab(word, suggest, location) {
 
 function acceptEdit(word, suggest, location) {
 	console.log('Called acceptEdit()');
-	const paragraph = document.getElementById('text').textContent;
-	wordGlobalized = new RegExp(word, 'gi');
-	console.log("Random Word: " + wordGlobalized);
+	const paragraph = document.getElementById('text').textContent; // Get plain text
+	let cleanWord = word.trim();
+	let wordPattern = new RegExp('\\b' + cleanWord.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'gi');
+	console.log("Word Pattern: " + wordPattern);
+	
+	var fixed;
 	if (suggest == ' REMOVE ') {
-		var fixed = paragraph.replace(wordGlobalized, ' ');
+		fixed = paragraph.replace(wordPattern, '');
 	} else {
-		var fixed = paragraph.replace(wordGlobalized, suggest);
+		fixed = paragraph.replace(wordPattern, suggest.trim());
 	}
-	document.getElementById('text').innerHTML = fixed;
+	
+	// Set the plain text first, then let recalculate handle the highlighting
+	document.getElementById('text').innerHTML = '<span class=\'other\'>' + fixed + '</span>';
 } // Working
 
 /*

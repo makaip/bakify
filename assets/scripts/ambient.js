@@ -27,12 +27,16 @@ function modal(present) {
 function info(present) {
 	console.log("Info Called");
 	const info = document.getElementById('info');
-	if (present) {
-		info.style.display = "block";
-		console.log("Info Displayed");
+	if (info) { // Check if element exists before trying to access it
+		if (present) {
+			info.style.display = "block";
+			console.log("Info Displayed");
+		} else {
+			info.style.display = "none";
+			console.log("Info Hidden");
+		}
 	} else {
-		info.style.display = "none";
-		console.log("Info Hidden");
+		console.log("Info element not found - skipping");
 	}
 }
 
