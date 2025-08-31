@@ -16,10 +16,11 @@ function modal(present) {
 	const ad = document.getElementById("adoverlay");
 	if (present) {
 		modal.style.display = 'block';
-		ad.style.display = 'block';
+		if (ad) ad.style.display = 'block'; // Only set style if element exists
 		console.log('Modal: Block');
 	} else {
 		modal.style.display = 'none';
+		if (ad) ad.style.display = 'none'; // Only set style if element exists
 		console.log('Modal: None');
 	}
 }
